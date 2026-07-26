@@ -1,12 +1,19 @@
 package main
 
 import (
-	"fmt"
 	"time"
 )
 
+type StatusChamado string
+
+const (
+	StatusAberto        StatusChamado = "Aberto"
+	StatusEmAtendimento StatusChamado = "Em atendimento"
+	StatusResolvido     StatusChamado = "Resolvido"
+	StatusCancelado     StatusChamado = "Cancelado"
+)
+
 type Chamado struct {
-	s
 	NumeroDoChamado       int
 	Titulo                string
 	Descricao             string
@@ -14,14 +21,9 @@ type Chamado struct {
 	Responsavel           string
 	Categoria             string
 	Prioridade            string
-	Status                string
+	Status                StatusChamado
 	Solucao               string
 	DataDeCriacao         time.Time
 	DataDaUltimaAlteracao time.Time
 	DataDeResolucao       time.Time
-}
-
-func VerStruct() {
-	fmt.Println("Hello World")
-	return
 }
