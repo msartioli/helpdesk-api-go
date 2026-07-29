@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
+	conectarBanco()
 	controller.Rota()
 	http.ListenAndServe(":8080", nil)
 }
