@@ -25,5 +25,5 @@ type Chamado struct {
 	Solucao               string
 	DataDeCriacao         time.Time
 	DataDaUltimaAlteracao time.Time
-	DataDeResolucao       time.Time
+	DataDeResolucao       time.Time	
 }
